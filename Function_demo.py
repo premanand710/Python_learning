@@ -1,3 +1,21 @@
+# Collection parameter in a tuple..
+
+def sum_1(a,*b): # tuple
+    print(a,type(a))
+    print(b,type(b))
+    return a+sum(b)
+
+print(sum_1(10,20))
+print(sum_1(10,30,40,50,90))
+
+# def details_student(**details): # dictionary
+#     return f"{details.name}'s gender is {details.gender}"
+
+# print(details_student({'name':"prem",'gender':"m"}))
+# print(details_student({'name':"kumar",'gender':"m"}))
+
+
+
 
 # Defult parameter and named parameter..
 
@@ -18,8 +36,8 @@ def is_leap_year(year1):
     if (year1 % 400 == 0) and (year1 % 100 == 0):
         func_ret = True
     elif (year1 % 4 ==0) and (year1 % 100 != 0):
-        func_ret = False
-    
+        func_ret = True
+           
     return func_ret
 
 year_leap = int(input("Enter an year: "))
